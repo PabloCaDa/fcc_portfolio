@@ -1,0 +1,160 @@
+
+.cd-header {
+    position:fixed;
+    background-color: #fff;
+    top:0;
+    right:0;
+    left:0;
+    padding:20px;
+    transition: transform 0.5s, position 0.5s;
+    box-shadow:0px 3px 5px rgba(100, 100, 100, 0.49);
+    -webkit-transition: transform 0.5s, position 0.5s;
+    -moz-transition: transform 0.5s, position 0.5s;
+    -ms-transition: transform 0.5s, position 0.5s;
+    -o-transition: transform 0.5s, position 0.5s;
+  }
+  .cd-header.nav-is-visible {
+    position:relative;
+    transform: translateY(130px);
+    -webkit-transform: translateY(130px);
+    -moz-transform: translateY(130px);
+    -ms-transform: translateY(130px);
+    -o-transform: translateY(130px);
+}
+
+.cd-logo {
+  background-image: url('../img/DSC_0575.JPG');
+  background-position: center;
+  background-size: cover;
+  background-color: #000;
+  width:50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(128, 128, 128, 0.61);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+  
+.cd-3d-nav-container {
+  position: fixed;
+  height: 130px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  background-color: #000;
+  perspective: 1000px;
+  transform: translateY(-100%);
+  transition: transform 0.5s 0s, visibility 0.5s 0s;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -webkit-transition: transform 0.5s 0s, visibility 0.5s 0s;
+  -moz-transition: transform 0.5s 0s, visibility 0.5s 0s;
+  -ms-transition: transform 0.5s 0s, visibility 0.5s 0s;
+  -o-transition: transform 0.5s 0s, visibility 0.5s 0s;
+}
+.cd-3d-nav-container.nav-is-visible {
+  visibility: visible;
+  transform:translateY(0);
+  transition: transform 0.5s 0s, visibility 0.5s 0s;
+  -webkit-transition: transform 0.5s 0s, visibility 0.5s 0s;
+  -moz-transition: transform 0.5s 0s, visibility 0.5s 0s;
+  -ms-transition: transform 0.5s 0s, visibility 0.5s 0s;
+  -o-transition: transform 0.5s 0s, visibility 0.5s 0s;
+}
+
+.cd-3d-nav {
+  /*thisisthe3Drotatingnavigation*/
+  position: relative;
+  transform-origin: center bottom;
+  transform: rotateX(90deg);
+  visibility:hidden;
+  transition: transform 0.4s 0s, visibility 0.5s 0s;
+  height: 100%;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  -webkit-transition: transform 0.4s 0s, visibility 0.5s 0s;
+  -moz-transition: transform 0.4s 0s, visibility 0.5s 0s;
+  -ms-transition: transform 0.4s 0s, visibility 0.5s 0s;
+  -o-transition: transform 0.4s 0s, visibility 0.5s 0s;
+}
+
+.cd-3d-nav-container.nav-is-visible .cd-3d-nav{
+  transform: rotate(0deg);
+  visibility: visible;
+  transition: transform 0.8s 0s, visibility 0.5s 0s;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -webkit-transition: transform 0.8s 0s, visibility 0.5s 0s;
+  -moz-transition: transform 0.8s 0s, visibility 0.5s 0s;
+  -ms-transition: transform 0.8s 0s, visibility 0.5s 0s;
+  -o-transition: transform 0.8s 0s, visibility 0.5s 0s;
+}
+  
+.cd-3d-nav li{
+  background-color:  rgb(50, 31, 82);
+  padding:0px 20px;
+  width:33%;
+}
+
+.cd-3d-nav li:hover{
+  background-color: rgba(120, 83, 189, 0.74);
+}
+
+.cd-3d-nav li:hover a, .cd-3d-nav li:hover i{
+  color: #fff;
+}
+.cd-3d-nav li a{
+  color:#d8d7d7ab;
+}
+
+.cd-3d-nav li i{
+  color:#d8d7d7ab;
+  margin-bottom:10px;
+}
+
+.cd-3d-nav .cd-selected{
+ background: rgb(127, 89, 199);
+}
+
+.cd-3d-nav  .cd-selected a, .cd-3d-nav  .cd-selected i{
+  color:#fff;
+}
+main {
+  transition: transform 0.5s;
+}
+main.nav-is-visible {
+  transform: translateY(130px);
+  -webkit-transform: translateY(130px);
+  -moz-transform: translateY(130px);
+  -ms-transform: translateY(130px);
+  -o-transform: translateY(130px);
+}
+
+.cd-marker {
+  background-color: currentColor;
+}
+.cd-marker::before {
+  /* triangle at the bottom of nav selected item */
+  height: 0;
+  width: 0;
+  border: 10px solid transparent;
+  border-bottom-color: inherit; 
+}
+
+/* these are the colors of the markers - line + arrow */
+.color-1 {
+  color: #9a57bd; 
+}
+
+.color-2 {
+  color: #c96aa4; 
+}
